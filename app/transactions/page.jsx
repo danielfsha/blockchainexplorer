@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import TransactionsTable from "@/components/TransactionsTable";
 
-function transactions() {
+function TransactionsPage() {
   const [transactions, setTransactions] = useState([]);
 
   const getLatestTransactions = async () => {
@@ -32,4 +32,4 @@ function transactions() {
   );
 }
 
-export default transactions;
+export default TransactionsPage;

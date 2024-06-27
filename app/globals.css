@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply overflow-x-hidden;
+  }
+
+  th,
+  td {
+    @apply p-4 text-sm border-b;
+  }
+
+  th {
+    @apply uppercase text-xs py-6;
+  }
+
+  .highlight {
+    @apply p-1 text-[12px] rounded-md uppercase border border-green-300 text-green-500 bg-green-600/15;
+  }
+
+  .wrapper {
+    @apply container max-w-5xl mx-auto px-2;
+  }
+
+  .table {
+    @apply table-auto w-full bg-white border shadow-xl rounded-xl shadow-gray-500/10 overflow-hidden text-gray-700;
+  }
+
+  .card {
+    @apply flex flex-col bg-white border shadow-xl rounded-xl shadow-gray-500/10;
+  }
+
+  .input {
+    @apply w-full max-w-md flex items-center justify-between relative p-1.5 pl-3 text-gray-500 bg-white border shadow-xl rounded-xl shadow-gray-500/10;
+  }
+
+  .btn {
+    @apply flex items-center uppercase bg-green-600 text-white rounded-md font-mono justify-center space-x-2 p-3;
+  }
+
+  .data_row {
+    @apply flex items-center justify-between p-3 border-b hover:bg-green-400/5;
+  }
+
+  .transaction_type_icon {
+    @apply w-12 h-12 flex items-center justify-center rounded-md border;
+  }
+}

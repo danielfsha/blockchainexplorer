@@ -41,9 +41,9 @@ export default function Home() {
     // block number
     setLastFinalizedBlock(latestBlock);
 
-    // only 5 elememts
     setRecentTransactions(previousBlockInfo[0].transactions);
 
+    // elements from index 1, to 5 are the blocks
     const blocks = [];
     for (let i = 1; i <= 5; i++) {
       blocks.push(previousBlockInfo[i]);
@@ -73,7 +73,11 @@ export default function Home() {
       {/* Blocks and Transactions Cards */}
       <BlocksAndTransactions
         blocks={recentBlocks}
-        transactions={recentTransactions}
+        transactions={
+          recentTransactions.length >= 5
+            ? recentTransactions.slice(0, 5)
+            : recentTransactions
+        }
       />
     </main>
   );

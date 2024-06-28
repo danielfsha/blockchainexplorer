@@ -23,7 +23,8 @@ const DataCard = ({ title, data }) => {
       {/* card Footer/CTA */}
       <div className="p-4">
         <Link
-          href={title == "Latest Blocks" ? "/blocks" : "/transactions"}
+          // href={title == "Latest Blocks" ? "/blocks" : "/transactions"}
+          href="#"
           className="btn"
         >
           <span>
